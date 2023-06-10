@@ -13,7 +13,7 @@ from time import sleep
 import numpy as np
 from ctypes import windll, Structure, c_long, byref
 from PIL import Image
-from Voice_Meneger4 import *
+from Test import *
 
 language = 'ru'
 model_id = 'ru_v3'
