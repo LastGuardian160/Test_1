@@ -5,8 +5,8 @@ import os
 import sys
 
 class Ui_MainWindow(object):
-
-    audio_vol = 0.2
+    def __init__(self):
+        self.audio_vol = 0.2
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -728,8 +728,10 @@ class Ui_MainWindow(object):
         os.system(f'nircmd.exe changesysvolume +{value*655}')
 
     def Volume_GP_Controller(self, value):
-        audio_vol = value/100
-        return audio_vol
+        self.audio_vol = value/100
+        print(self.audio_vol)
+        print(id(self.audio_vol))
+        return self.audio_vol
 
 class MainWindow(QMainWindow):
 
