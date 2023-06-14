@@ -69,8 +69,9 @@ def va_speak(word):
                             sample_rate=sample_rate,
                             put_accent=put_accent,
                             put_yo=put_yo)
-
-    sd.play(audio * audio_vol, sample_rate * 1.05)
+    print(id(ui.audio_vol))
+    print(ui.audio_vol)
+    sd.play(audio * ui.audio_vol, sample_rate * 1.05)
     time.sleep((len(audio) / sample_rate) + 0.5)
     sd.stop()
 
@@ -375,5 +376,7 @@ if __name__ == '__main__':
     audio_vol = ui.audio_vol
     VSP()
     VS("Готова к работе")
+    print(id(globals().get('ui')))
+    print(id(ui))
     sys.exit(app.exec_())
 
