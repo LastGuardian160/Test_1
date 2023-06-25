@@ -244,25 +244,10 @@ def Voice_Meneger_Pack():
                 pg.leftClick(267, 20)
                 VS('вкладка закрыта')
                 print(f'вкладка закрыта')
-
-        for val in music:
-            if text == val:
-                wb(site_vk)
-                time.sleep(8)
-                pg.leftClick(1591, 454)  # 1584 383
-                time.sleep(2)
-                pg.leftClick(593, 439)  # 457 877
-
+              
         for val in next_music:
             if text == val:
                 pg.leftClick(812, 108)
-                word = 'Готово'
-                VS(word)
-                print(f'Готово')
-
-        for val in back_music:
-            if text == val:
-                pg.leftClick(752, 100)
                 word = 'Готово'
                 VS(word)
                 print(f'Готово')
@@ -301,22 +286,7 @@ def Voice_Meneger_Pack():
         for val in soft:
             if text == val:
                 pg.leftClick(1474, 24)
-
-        for val in Metro_2033:
-            if text == val:
-                VS('Запускаю Метро Ласт Лайт')
-                wb(Metro)
-
-        for val in Terraria:
-            if text == val:
-                VS('Запускаю Террарию')
-                wb(Terraria_start)
-
-        for val in MewnBase:
-            if text == val:
-                VS('Запускаю MewnBase')
-                wb(MewnBase_start)
-
+              
         for val in Read_file:
             if text != None:
                 if val in text:
